@@ -12,8 +12,9 @@
  const form = document.querySelector('#form1');
 
         // Add event listener for form submission
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent form from refreshing the page
+        form.addEventListener('submit',getFormvalue) 
+         function getFormvalue(e){
+            e.preventDefault(); // Prevent form from refreshing the page
 
             // Get input values using form elements
             const firstName = form.fname.value.trim();
@@ -21,7 +22,8 @@
 
             // Show alert with full name
             alert(`${firstName} ${lastName}`);
-        });
+		 }
+        
 
 
 
